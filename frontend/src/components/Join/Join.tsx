@@ -15,7 +15,7 @@ export function Join({ onClickButtom, onSocket }: JoinProps) {
     const username = usernameRef.current!.value;
 
     if (!username.trim()) return;
-    const socket = await io.connect('http://localhost:3001');
+    const socket = await io.connect('https://real-time-chat-mu.vercel.app/');
 
     socket.emit('set_username', username);
 
